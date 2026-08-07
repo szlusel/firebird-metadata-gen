@@ -2,7 +2,7 @@
 
 
 
-Proste narzędzie CLI do zarządzania strukturą baz danych  * *Firebird 5.0 * *.
+Proste narzędzie CLI do zarządzania strukturą baz danych  **Firebird 5.0 **.
 
 
 
@@ -95,7 +95,7 @@ Scripts
 
 ```
 
-Kolejność wykonywania:
+**Kolejność wykonywania:**
 
 1. Domeny
 2. Tabele

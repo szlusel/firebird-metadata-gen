@@ -1,20 +1,20 @@
-\# FirebirdMetadataGenerator
+# FirebirdMetadataGenerator
 
 
 
-Proste narzędzie CLI do zarządzania strukturą baz danych \*\*Firebird 5.0\*\*.
+Proste narzędzie CLI do zarządzania strukturą baz danych  * *Firebird 5.0 * *.
 
 
 
-\## Funkcjonalności
+## Funkcjonalności
 
 
 
-\* eksport struktury bazy do skryptów SQL,
+* eksport struktury bazy do skryptów SQL,
 
-\* tworzenie nowej bazy ze skryptów,
+* tworzenie nowej bazy ze skryptów,
 
-\* aktualizacja istniejącej bazy.
+* aktualizacja istniejącej bazy.
 
 
 
@@ -22,65 +22,65 @@ Obsługiwane elementy:
 
 
 
-\* domeny,
+* domeny,
 
-\* tabele i kolumny,
+ * tabele i kolumny,
 
-\* procedury PSQL.
-
-
-
-\## Wymagania
+ * procedury PSQL.
 
 
 
-\* .NET 8
-
-\* Firebird 5.0
+ ## Wymagania
 
 
 
-\## Użycie
+ * .NET 8
+
+ * Firebird 5.0
 
 
 
-\### Budowanie nowej bazy
+ ## Użycie
 
 
 
-```powershell
-
-dotnet run -- build-db --db-dir "C:\\DB" --scripts-dir "C:\\Scripts"
-
-```
-
-
-
-\### Eksport skryptów z bazy
+ ### Budowanie nowej bazy
 
 
 
 ```powershell
 
-dotnet run -- export-scripts --connection-string "..." --output-dir "C:\\Scripts"
+dotnet run -- build-db --db-dir "C:\DB" --scripts-dir "C:\Scripts"
 
 ```
 
 
 
-\### Aktualizacja bazy
+ ### Eksport skryptów z bazy
 
 
 
 ```powershell
 
-dotnet run -- update-db --connection-string "..." --scripts-dir "C:\\Scripts"
+dotnet run -- export-scripts --connection-string "..." --output-dir "C:\Scripts"
 
 ```
 
 
 
-\## Struktura skryptów
+ ### Aktualizacja bazy
+
+
+
+```powershell
+
+dotnet run -- update-db --connection-string "..." --scripts-dir "C:\Scripts"
+
+```
+
+
+
+ ## Struktura skryptów
 
 
 
@@ -89,42 +89,28 @@ dotnet run -- update-db --connection-string "..." --scripts-dir "C:\\Scripts"
 Scripts
 
 │
-
-├── 01\_domains.sql
-
-├── 02\_tables.sql
-
-└── 03\_procedures.sql
+├── 01 _domains.sql
+├── 02 _tables.sql
+└── 03 _procedures.sql
 
 ```
 
-
-
 Kolejność wykonywania:
 
+1. Domeny
+2. Tabele
+3. Procedury
 
-
-1\. Domeny
-
-2\. Tabele
-
-3\. Procedury
-
-
-
-\## Aktualizacja różnicowa
-
-
+ ## Aktualizacja różnicowa
 
 Narzędzie umożliwia:
 
 
+ * dodać brakujące domeny,
 
-\* dodać brakujące domeny,
+ * dodać brakujące kolumny,
 
-\* dodać brakujące kolumny,
-
-\* zaktualizować procedury przez `CREATE OR ALTER`.
+ * zaktualizować procedury przez `CREATE OR ALTER`.
 
 
 

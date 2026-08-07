@@ -2,7 +2,7 @@
 
 
 
-Proste narzędzie CLI do zarządzania strukturą baz danych  **Firebird 5.0 **.
+Proste narzędzie CLI do zarządzania strukturą baz danych  **Firebird 5.0**.
 
 
 
